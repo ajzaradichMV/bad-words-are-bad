@@ -1,0 +1,23 @@
+{
+  "name": "bad-words-are-bad",
+  "version": "1.0.0",
+  "description": "Test npm init",
+  "main": "main.js",
+  "scripts": {
+    "test": "hey-there"
+  },
+  "keywords": [
+    "nope"
+  ],
+  "author": "AJ duh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "htmlparser2": "^7.2.0",
+    "mongoose": "^6.3.0",
+    "node-fetch": "2.0"
+  }
+}
