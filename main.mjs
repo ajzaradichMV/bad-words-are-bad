@@ -23,11 +23,11 @@ app.get('/', (req, res) => {
  * 
  * Query params: 
  * 
- * site - Takes an URL location as a parameter and passes it to the API. Requires a sitemap.xml file.
+ * site - Takes a URL location as a parameter and passes it to the API. Requires a sitemap.xml file.
  * force - Accepts either "true" or "false" and if set to "true" will force the record to be updated even if less than 30 days. Defaults to false.
  * 
  */
-app.get('/api/v1', (req, res) => {
+app.get('/api/v1', async (req, res) => {
     let siteXML = '';
     let force = 'false';
 
@@ -46,6 +46,6 @@ app.get('/api/v1', (req, res) => {
     }
     force = req.query.force;
 
-    databaseRun(siteXML, force)
-    res.json(siteXML)
+    var runData = await databaseRun(siteXML, force)
+    res.json(runData)
 })
